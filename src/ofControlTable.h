@@ -49,6 +49,7 @@ public:
 	/*!
 	* \fn	ofControlTable::ofControlTable(int id, ofConnexion * connexion);
 	* \brief	Constructor of the ofControlTable class, Creates instance of ofControlTable.
+	*
 	* \param 		  	id		 	The Dynamixel ID.
 	* \param [in,out]	connexion	The connexion instance with the Dynamixel.
 	*/
@@ -64,7 +65,7 @@ public:
 
 	/*!
 	* \fn	ofConnexion * ofControlTable::getConnexion();
-	* \brief	getConnexion get the connexion instance with the Dynamixel.
+	* \brief	Get the connexion instance with the Dynamixel.
 	* \return	The connexion instance with the Dynamixel.
 	*/
 
@@ -73,7 +74,7 @@ public:
 	/*!
 	* \fn	void ofControlTable::readData(uint16_t address);
 	*
-	* \brief	readData Read the data of Control Table. The current status and operation, which
+	* \brief	Read the data of Control Table. The current status and operation, which
 	* 			exists inside of Dynamixel.
 	*
 	* \param	address	The location of data in the Control Table.
@@ -84,7 +85,7 @@ public:
 	/*!
 	* \fn	int ofControlTable::writeData(int address, int dataChange);
 	*
-	* \brief	writeData Write/Update the data of Control Table.
+	* \brief	Write/Update the data of Control Table.
 	*
 	* \param	address   	The location of data in the Control Table.
 	* \param	dataChange	the new Data for the register specified by address.
@@ -97,7 +98,7 @@ public:
 	/*!
 	* \fn	int ofControlTable::modelNumber();
 	*
-	* \brief	modelNumber Get the model number.
+	* \brief	Get the model number.
 	*
 	* \return	The model number.
 	*/
@@ -107,7 +108,7 @@ public:
 	/*!
 	* \fn	int ofControlTable::firmwareVersion();
 	*
-	* \brief	firmwareVersion Get the firmware version.
+	* \brief	Get the firmware version.
 	*
 	* \return	The firmware version.
 	*/
@@ -117,7 +118,7 @@ public:
 	/*!
 	* \fn	int ofControlTable::getID();
 	*
-	* \brief	getID Get the Dynamixel ID.
+	* \brief	Get the Dynamixel ID.
 	*
 	* \return	the Dynamixel ID.
 	*/
@@ -127,7 +128,7 @@ public:
 	/*!
 	* \fn	int ofControlTable::baudRate();
 	*
-	* \brief	baudRate Get the baud rate the Dynamixel will communicate at.
+	* \brief	Get the baud rate the Dynamixel will communicate at.
 	*
 	* \return	the baud rate the Dynamixel will communicate at.
 	*/
@@ -137,7 +138,7 @@ public:
 	/*!
 	* \fn	int ofControlTable::returnDelay();
 	*
-	* \brief	returnDelay Get The return delay.
+	* \brief	Get The return delay.
 	*
 	* \return	the time it takes for a status packet to return after a command packet is sent.
 	*/
@@ -157,7 +158,7 @@ public:
 	/*!
 	* \fn	int ofControlTable::CCWAngleLimit();
 	*
-	* \brief	CCWAngleLimit Get or set the CCW angle limit for the Dynamixel's movement.
+	* \brief	Get or set the CCW angle limit for the Dynamixel's movement.
 	*
 	* \return	The Lowest byte of counterclockwise Angle Limit.
 	*/

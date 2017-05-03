@@ -39,6 +39,7 @@ void ofConnexion::connect(const char * portName, float protocolVersion, int baud
 	baudrate = baud;
 	portHandler = dynamixel::PortHandler::getPortHandler(portName);
 	packetHandler = dynamixel::PacketHandler::getPacketHandler(protocolVersion);
+	portHandler->openPort();
 }
 
 dynamixel::PortHandler * ofConnexion::getPortHandler()

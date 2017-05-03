@@ -9,7 +9,7 @@
 #include <inttypes.h>
 
 /*!
- * \enum	ofRegister
+ * \enum	ofRegister enum
  *
  * \brief	Values that represent of registries.
  *

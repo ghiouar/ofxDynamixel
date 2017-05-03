@@ -52,7 +52,7 @@ public:
 	/*!
 	 * \fn	bool ofConnexion::open();
 	 *
-	 * \brief	open open a connection with Dynamixel.
+	 * \brief	Open a connection with Dynamixel.
 	 *
 	 * \return	True if the connection is established, false otherwise.
 	 */
@@ -62,7 +62,7 @@ public:
 	/*!
 	 * \fn	void ofConnexion::close();
 	 *
-	 * \brief	close Close the connection already established with Dynamixel.
+	 * \brief	Close the connection already established with Dynamixel.
 	 */
 
 	void close();
@@ -70,7 +70,7 @@ public:
 	/*!
 	 * \fn	void ofConnexion::connect(const char * portName, float protocolVersion, int baudrate);
 	 *
-	 * \brief	connect create a new connection with Dynamixel.
+	 * \brief	Create a new connection with Dynamixel.
 	 *
 	 * \param	portName	   	COM port device name.
 	 * \param	protocolVersion	Version of the communication protocol used in Dynamixel.
@@ -82,7 +82,7 @@ public:
 	/*!
 	 * \fn	dynamixel::PortHandler * ofConnexion::getPortHandler();
 	 *
-	 * \brief	getPortHandler Get the port handler.
+	 * \brief	Get the port handler.
 	 *
 	 * \return	The port handler.
 	 */
@@ -92,7 +92,7 @@ public:
 	/*!
 	 * \fn	dynamixel::PacketHandler * ofConnexion::getPacketHandler();
 	 *
-	 * \brief	getPacketHandler Get the packet handler.
+	 * \brief	Get the packet handler.
 	 *
 	 * \return	The packet handler.
 	 */
@@ -102,7 +102,7 @@ public:
 	/*!
 	 * \fn	int ofConnexion::getBaudRate();
 	 *
-	 * \brief	getBaudRate Get the  baud rate.
+	 * \brief	Get the  baud rate.
 	 *
 	 * \return	the baud rate.
 	 */
@@ -112,7 +112,7 @@ public:
 	/*!
 	 * \fn	bool ofConnexion::setBaudRate(int baudrate);
 	 *
-	 * \brief	setBaudRate Set the  baud rate.
+	 * \brief	Set the  baud rate.
 	 *
 	 * \param	baudrate	the  baud rate.
 	 *

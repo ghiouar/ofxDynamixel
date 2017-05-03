@@ -2,23 +2,23 @@
 #include "stdafx.h"
 
 
-ofDynamixel::ofDynamixel(int id, char * device_name, double protocol_version, int baudrate, int position_min, int position_max)
+ofDynamixel::ofDynamixel(int id, char * device_name, float protocol_version, int baudrate, int position_min, int position_max)
 {
 	this->id = id; this->positionMinimum = position_min;
 	this->positionMaximum = position_max;
 	this->turnsCount = 0;
-	this->portHundler = new ofConnexion(device_name, protocol_version, baudrate);
-	this->control_table = new ofControlTable(id, portHundler);
+	this->portHandler = new ofConnexion(device_name, protocol_version, baudrate);
+	this->controlTable = new ofControlTable(id, portHandler);
 }
 
-ofDynamixel::ofDynamixel(int id, char * device_name, double protocol_version, int baudrate)
+ofDynamixel::ofDynamixel(int id, char * device_name, float protocol_version, int baudrate)
 {
 	this->id = id;
 	this->positionMinimum = 0;
 	this->positionMaximum = 0;
 	this->turnsCount = 0;
-	this->portHundler = new ofConnexion(device_name, protocol_version, baudrate);
-	this->control_table = new ofControlTable(id, portHundler);
+	this->portHandler = new ofConnexion(device_name, protocol_version, baudrate);
+	this->controlTable = new ofControlTable(id, portHandler);
 }
 
 ofDynamixel::ofDynamixel(int id, int position_min, int position_max)
@@ -27,8 +27,8 @@ ofDynamixel::ofDynamixel(int id, int position_min, int position_max)
 	this->positionMinimum = position_min;
 	this->positionMaximum = position_max;
 	this->turnsCount = 0;
-	this->portHundler = new ofConnexion();
-	this->control_table = new ofControlTable(id, portHundler);
+	this->portHandler = new ofConnexion();
+	this->controlTable = new ofControlTable(id, portHandler);
 
 
 }
@@ -39,15 +39,15 @@ ofDynamixel::ofDynamixel(int id)
 	this->positionMinimum = 0;
 	this->positionMaximum = 0;
 	this->turnsCount = 0;
-	this->portHundler = new ofConnexion();
-	this->control_table = new ofControlTable(id, portHundler);
+	this->portHandler = new ofConnexion();
+	this->controlTable = new ofControlTable(id, portHandler);
 }
 
 
 ofDynamixel::~ofDynamixel()
 {
-	delete portHundler;
-	delete control_table;
+	delete portHandler;
+	delete controlTable;
 }
 
 int ofDynamixel::getID()
@@ -87,12 +87,12 @@ int ofDynamixel::getTurnsCount()
 
 ofControlTable * ofDynamixel::getControlTable()
 {
-	return this->control_table;
+	return this->controlTable;
 }
 
-ofConnexion * ofDynamixel::getPortHundler()
+ofConnexion * ofDynamixel::getPortHandler()
 {
-	return this->portHundler;
+	return this->portHandler;
 }
 
 void ofDynamixel::setID(int id)
@@ -100,14 +100,14 @@ void ofDynamixel::setID(int id)
 	this->id = id;
 }
 
-void ofDynamixel::setPositionMinimum(int position_min)
+void ofDynamixel::setPositionMinimum(int positionMinimum)
 {
-	this->positionMinimum = position_min;
+	this->positionMinimum = positionMinimum;
 }
 
-void ofDynamixel::setPositionMaximum(int position_max)
+void ofDynamixel::setPositionMaximum(int positionMaximum)
 {
-	this->positionMaximum = position_max;
+	this->positionMaximum = positionMaximum;
 }
 
 void ofDynamixel::setTurnsCount(int turns_count)
@@ -115,20 +115,20 @@ void ofDynamixel::setTurnsCount(int turns_count)
 	this->turnsCount = turns_count;
 }
 
-void ofDynamixel::setControlTable(ofControlTable * control_table)
+void ofDynamixel::setControlTable(ofControlTable * controlTable)
 {
-	this->control_table = control_table;
+	this->controlTable = controlTable;
 }
 
-void ofDynamixel::setPortHundler(ofConnexion * portHundler)
+void ofDynamixel::setPortHandler(ofConnexion * portHandler)
 {
-	this->portHundler = portHundler;
+	this->portHandler = portHandler;
 }
 
 bool ofDynamixel::ping()
 {
 	uint8_t error = 0;
-	return this->portHundler->getPacketHandler()->ping(this->portHundler->getPortHandler(), this->id, &error);
+	this->portHandler->getPacketHandler()->ping(this->portHandler->getPortHandler(), this->id, &error);
 	if (error != 0) {
 		return false;
 	}
@@ -137,12 +137,22 @@ bool ofDynamixel::ping()
 
 bool ofDynamixel::Reset()
 {
-	return false;
+	uint8_t error = 0;
+	error = this->portHandler->getPacketHandler()->factoryReset(this->portHandler->getPortHandler(), this->id, error);
+	if (error != 0) {
+		return false;
+	}
+	return true;
 }
 
 bool ofDynamixel::Initialize()
 {
-	return false;
+	uint8_t error = 0;
+	this->portHandler->getPortHandler()->clearPort();
+	if (error != 0) {
+		return false;
+	}
+	return true;
 }
 
 bool ofDynamixel::Synchronize()
@@ -150,12 +160,17 @@ bool ofDynamixel::Synchronize()
 	return false;
 }
 
-bool ofDynamixel::Stop()
+void ofDynamixel::Stop()
 {
-	return false;
+	this->controlTable->getConnexion()->close();
 }
 
 bool ofDynamixel::reboot()
 {
-	return false;
+	uint8_t error = 0;
+	this->portHandler->getPacketHandler()->reboot(this->portHandler->getPortHandler(), this->id, &error);
+	if (error != 0) {
+		return false;
+	}
+	return true;
 }

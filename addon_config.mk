@@ -51,11 +51,11 @@ common:
 	# in the src folders in libs and the root of the addon. if your addon needs
 	# to include files in different places or a different set of files per platform
 	# they can be specified here
-	ADDON_SOURCES = libs/DynamixelSDK/src/
+	#ADDON_SOURCES = libs/DynamixelSDK/src/
 	#ADDON_LIBS 		= /libs/DynamixelSDK/lib/x64/dxl_x64_cpp.lib;
 	# ADDON_LIBS 		+= /libs/DynamixelSDK/lib/x64/dxl_x64_cpp.dll;
 	# ADDON_LIBS 		= libs/DynamixelSDK/lib/Win32/dxl_x86_cpp.lib;
-	#ADDON_LIBS 		+= /libs/DynamixelSDK/lib/Win32/dxl_x86_cpp.dll;
+	#ADDON_LIBS = /libs/DynamixelSDK/lib/Win32/dxl_x86_cpp.dll
 	
 	# some addons need resources to be copied to the bin/data folder of the project
 	# specify here any files that need to be copied, you can use wildcards like * and ?

@@ -26,9 +26,6 @@ public:
 	 *
 	 * \brief	Constructor of the ofControlTable class, Creates instance of ofControlTable.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \param 		  	id			   	The Dynamixel ID.
 	 * \param [in,out]	portName	   	COM port device name.
 	 * \param 		  	protocolVersion	Version of the communication protocol used in Dynamixel.
@@ -37,15 +34,12 @@ public:
 	 * \param 		  	positionMax	   	position Maximum limit.
 	 */
 
-	ofDynamixel(int id, char * portName, double protocolVersion, int baudrate, int positionMin, int positionMax);
+	ofDynamixel(int id, char * portName, float protocolVersion, int baudrate, int positionMin, int positionMax);
 
 	/*!
 	 * \fn	ofDynamixel::ofDynamixel(int id, char * device_name, double protocol_version, int baudrate);
 	 *
 	 * \brief	Constructor of the ofControlTable class, Creates instance of ofControlTable.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \param 		  	id					The Dynamixel ID.
 	 * \param [in,out]	device_name			COM port device name.
@@ -53,15 +47,12 @@ public:
 	 * \param 		  	baudrate			Baud Rate of Dynamixel.
 	 */
 
-	ofDynamixel(int id, char * device_name, double protocol_version, int baudrate);
+	ofDynamixel(int id, char * device_name, float protocol_version, int baudrate);
 
 	/*!
 	 * \fn	ofDynamixel::ofDynamixel(int id, int positon_min, int position_max);
 	 *
 	 * \brief	Constructor of the ofControlTable class, Creates instance of ofControlTable.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \param	id				The Dynamixel ID.
 	 * \param	positon_min 	position Minimum limit.
@@ -75,9 +66,6 @@ public:
 	 *
 	 * \brief	Constructor of the ofControlTable class, Creates instance of ofControlTable.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \param	id	The Dynamixel ID.
 	 */
 
@@ -87,9 +75,6 @@ public:
 	 * \fn	ofDynamixel::~ofDynamixel();
 	 *
 	 * \brief	ofDynamixel.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 */
 
 	~ofDynamixel();
@@ -98,9 +83,6 @@ public:
 	 * \fn	int ofDynamixel::getID();
 	 *
 	 * \brief	getID.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \return	The identifier.
 	 */
@@ -112,9 +94,6 @@ public:
 	 *
 	 * \brief	getDevince_name.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \return	Null if it fails, else the port name.
 	 */
 
@@ -124,9 +103,6 @@ public:
 	 * \fn	double ofDynamixel::getProtocolVersion();
 	 *
 	 * \brief	getProtocol_version.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \return	The protocol version.
 	 */
@@ -138,9 +114,6 @@ public:
 	 *
 	 * \brief	getBaudrate.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \return	The baudrate.
 	 */
 
@@ -150,9 +123,6 @@ public:
 	 * \fn	int ofDynamixel::getPositionMinimum();
 	 *
 	 * \brief	getPosition_min.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \return	The calculated position minimum.
 	 */
@@ -164,9 +134,6 @@ public:
 	 *
 	 * \brief	getPosition_max.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \return	The calculated position maximum.
 	 */
 
@@ -176,9 +143,6 @@ public:
 	 * \fn	int ofDynamixel::getTurnsCount();
 	 *
 	 * \brief	getTurns_count.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \return	The turns count.
 	 */
@@ -190,9 +154,6 @@ public:
 	 *
 	 * \brief	getControlTable.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \return	Null if it fails, else the control table.
 	 */
 
@@ -203,21 +164,15 @@ public:
 	 *
 	 * \brief	getPortHundler.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
-	 * \return	Null if it fails, else the port hundler.
+	 * \return	Null if it fails, else the port handler.
 	 */
 
-	ofConnexion * getPortHundler();
+	ofConnexion * getPortHandler();
 
 	/*!
 	 * \fn	void ofDynamixel::setID(int id);
 	 *
 	 * \brief	setID.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \param	id	.
 	 */
@@ -229,9 +184,6 @@ public:
 	 *
 	 * \brief	setPosition_min.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \param	position_min	.
 	 */
 
@@ -241,9 +193,6 @@ public:
 	 * \fn	void ofDynamixel::setPositionMaximum(int position_max);
 	 *
 	 * \brief	setPosition_max.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \param	position_max	.
 	 */
@@ -255,9 +204,6 @@ public:
 	 *
 	 * \brief	setTurns_count.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \param	turns_count	.
 	 */
 
@@ -267,9 +213,6 @@ public:
 	 * \fn	void ofDynamixel::setControlTable(ofControlTable * control_table);
 	 *
 	 * \brief	setControlTable.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \param [in,out]	control_table	.
 	 */
@@ -281,21 +224,15 @@ public:
 	 *
 	 * \brief	setPortHundler.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \param [in,out]	portHundler	.
 	 */
 
-	void setPortHundler(ofConnexion * portHundler);
+	void setPortHandler(ofConnexion * portHandler);
 
 	/*!
 	 * \fn	bool ofDynamixel::Ping();
 	 *
 	 * \brief	Pings this object.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */
@@ -307,9 +244,6 @@ public:
 	 *
 	 * \brief	Resets this object.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */
 
@@ -319,9 +253,6 @@ public:
 	 * \fn	bool ofDynamixel::Initialize();
 	 *
 	 * \brief	Initializes this object.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */
@@ -333,47 +264,25 @@ public:
 	 *
 	 * \brief	Synchronizes this object.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */
 
 	bool Synchronize(); // delete ?
 
 	/*!
-	 * \fn	bool ofDynamixel::scanServos();
-	 *
-	 * \brief	Scans the servos.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
-	 * \return	True if it succeeds, false if it fails.
-	 */
-
-	bool scanServos(); // depalce
-
-	/*!
 	 * \fn	bool ofDynamixel::Stop();
 	 *
 	 * \brief	Stops this object.
 	 *
-	 * \author	Agh
-	 * \date	01/05/2017
-	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */
 
-	bool Stop();
+	void Stop();
 
 	/*!
 	 * \fn	bool ofDynamixel::reboot();
 	 *
 	 * \brief	Reboots this object.
-	 *
-	 * \author	Agh
-	 * \date	01/05/2017
 	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */
@@ -392,7 +301,7 @@ private:
 	/*! \brief	Name of the device. */
 	char * portName;
 	/*! \brief	The protocol version. */
-	double protocolVersion;
+	float protocolVersion;
 	/*! \brief	The baudrate. */
 	int baudrate;
 	/*! \brief	The position minimum. */
@@ -401,10 +310,12 @@ private:
 	int positionMaximum;
 	/*! \brief	Number of turns. */
 	int turnsCount;
-	/*! \brief	The port hundler. */
-	ofConnexion * portHundler;
+	/*! \brief	The port handler. */
+	ofConnexion * portHandler;
 	/*! \brief	The control table. */
-	ofControlTable * control_table;
+	ofControlTable * controlTable;
+	/*! \brief	The control table. */
+	ofConnexion * connexionPort;
 
 
 };

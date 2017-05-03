@@ -1,36 +1,114 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Fichiers sources">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Fichiers de ressources">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Example_ofxDynamixel.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\src\ofConnexion.cpp">
+      <Filter>addons\ofxDynamixel\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ofControlTable.cpp">
+      <Filter>addons\ofxDynamixel\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ofDynamixel.cpp">
+      <Filter>addons\ofxDynamixel\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\stdafx.cpp">
+      <Filter>addons\ofxDynamixel\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{133acdc9-60e8-46f8-8a39-ebba431b8d12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxDynamixel">
+      <UniqueIdentifier>{3422d087-c2b3-454c-b2ac-22ec64537cbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxDynamixel\src">
+      <UniqueIdentifier>{670b3efe-3542-4752-9dcf-660fb0cb8f2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxDynamixel\libs">
+      <UniqueIdentifier>{d7ddfe4a-b01a-43b9-be90-b58261b29589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxDynamixel\libs\DynamixelSDK">
+      <UniqueIdentifier>{e32b91db-a1e8-451f-b36b-4424bcd51955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxDynamixel\libs\DynamixelSDK\include">
+      <UniqueIdentifier>{80c78a9b-c0f5-4918-96bd-4eeac9e382b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk">
+      <UniqueIdentifier>{6795c647-07a6-4a7a-ba5a-4b8c38fcf933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_linux">
+      <UniqueIdentifier>{49df16d7-c390-4472-8812-3c3909c47354}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_windows">
+      <UniqueIdentifier>{2f2fe196-ce5b-4175-a707-bfd189e6442d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ofConnexion.h">
+      <Filter>addons\ofxDynamixel\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ofControlTable.h">
+      <Filter>addons\ofxDynamixel\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ofDynamixel.h">
+      <Filter>addons\ofxDynamixel\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ofRegister.h">
+      <Filter>addons\ofxDynamixel\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\stdafx.h">
+      <Filter>addons\ofxDynamixel\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\targetver.h">
+      <Filter>addons\ofxDynamixel\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk.h">
+      <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk\group_bulk_read.h">
+      <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk\group_bulk_write.h">
+      <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk\group_sync_read.h">
+      <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk\group_sync_write.h">
+      <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk\packet_handler.h">
+      <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk\port_handler.h">
+      <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk\protocol1_packet_handler.h">
+      <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk\protocol2_packet_handler.h">
+      <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk_linux\port_handler_linux.h">
+      <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_linux</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk_windows\port_handler_windows.h">
+      <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
   </ItemGroup>
 </Project>

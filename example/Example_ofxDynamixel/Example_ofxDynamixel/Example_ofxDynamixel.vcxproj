@@ -197,6 +197,7 @@ D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_
     <ClCompile Include="..\..\..\src\stdafx.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\ofDynamixelServo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk.h" />
@@ -217,6 +218,7 @@ D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_
     <ClInclude Include="..\..\..\src\stdafx.h" />
     <ClInclude Include="..\..\..\src\targetver.h" />
     <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="src\ofDynamixelServo.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

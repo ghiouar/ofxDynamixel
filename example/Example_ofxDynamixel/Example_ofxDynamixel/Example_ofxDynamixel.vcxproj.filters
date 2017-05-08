@@ -19,6 +19,9 @@
     <ClCompile Include="..\..\..\src\stdafx.cpp">
       <Filter>addons\ofxDynamixel\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\ofDynamixelServo.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -106,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk_windows\port_handler_windows.h">
       <Filter>addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofDynamixelServo.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -82,7 +82,7 @@ public:
 	/*!
 	 * \fn	int ofDynamixel::getID();
 	 *
-	 * \brief	getID.
+	 * \brief	Get the Dynamixel ID.
 	 *
 	 * \return	The identifier.
 	 */
@@ -92,7 +92,7 @@ public:
 	/*!
 	 * \fn	char * ofDynamixel::getPortName();
 	 *
-	 * \brief	getDevince_name.
+	 * \brief	Get Port name.
 	 *
 	 * \return	Null if it fails, else the port name.
 	 */
@@ -102,7 +102,7 @@ public:
 	/*!
 	 * \fn	double ofDynamixel::getProtocolVersion();
 	 *
-	 * \brief	getProtocol_version.
+	 * \brief	Get the protocol version.
 	 *
 	 * \return	The protocol version.
 	 */
@@ -112,7 +112,7 @@ public:
 	/*!
 	 * \fn	int ofDynamixel::getBaudrate();
 	 *
-	 * \brief	getBaudrate.
+	 * \brief	get the baudrate.
 	 *
 	 * \return	The baudrate.
 	 */
@@ -122,7 +122,7 @@ public:
 	/*!
 	 * \fn	int ofDynamixel::getPositionMinimum();
 	 *
-	 * \brief	getPosition_min.
+	 * \brief	Get the position minimum.
 	 *
 	 * \return	The calculated position minimum.
 	 */
@@ -132,7 +132,7 @@ public:
 	/*!
 	 * \fn	int ofDynamixel::getPositionMaximum();
 	 *
-	 * \brief	getPosition_max.
+	 * \brief	Get the position maximum.
 	 *
 	 * \return	The calculated position maximum.
 	 */
@@ -142,7 +142,7 @@ public:
 	/*!
 	 * \fn	int ofDynamixel::getTurnsCount();
 	 *
-	 * \brief	getTurns_count.
+	 * \brief	Get the turns count.
 	 *
 	 * \return	The turns count.
 	 */
@@ -152,7 +152,7 @@ public:
 	/*!
 	 * \fn	ofControlTable * ofDynamixel::getControlTable();
 	 *
-	 * \brief	getControlTable.
+	 * \brief	Get the the control table.
 	 *
 	 * \return	Null if it fails, else the control table.
 	 */
@@ -162,69 +162,69 @@ public:
 	/*!
 	 * \fn	ofConnexion * ofDynamixel::getPortHundler();
 	 *
-	 * \brief	getPortHundler.
+	 * \brief	Get the port handler.
 	 *
 	 * \return	Null if it fails, else the port handler.
 	 */
-
 	ofConnexion * getPortHandler();
+
 
 	/*!
 	 * \fn	void ofDynamixel::setID(int id);
 	 *
-	 * \brief	setID.
+	 * \brief	Set the Dynamixel ID.
 	 *
-	 * \param	id	.
+	 * \param	The new Dynamixel ID..
 	 */
 
 	void setID(int id);
 
 	/*!
-	 * \fn	void ofDynamixel::setPositionMinimum(int position_min);
+	 * \fn	void ofDynamixel::setPositionMinimum(int positionMin);
 	 *
-	 * \brief	setPosition_min.
+	 * \brief	Set position min value.
 	 *
-	 * \param	position_min	.
+	 * \param	The new position min.
 	 */
 
-	void setPositionMinimum(int position_min);
+	void setPositionMinimum(int positionMin);
 
 	/*!
-	 * \fn	void ofDynamixel::setPositionMaximum(int position_max);
+	 * \fn	void ofDynamixel::setPositionMaximum(int positionMax);
 	 *
-	 * \brief	setPosition_max.
+	 * \brief	Set position max value.
 	 *
-	 * \param	position_max	.
+	 * \param	The new position max.	.
 	 */
 
-	void setPositionMaximum(int position_max);
+	void setPositionMaximum(int positionMax);
 
 	/*!
 	 * \fn	void ofDynamixel::setTurnsCount(int turns_count);
 	 *
-	 * \brief	setTurns_count.
+	 * \brief	Set turns count value.
 	 *
-	 * \param	turns_count	.
+	 * \param	The new	turns count value.
 	 */
 
-	void setTurnsCount(int turns_count);
+	void setTurnsCount(int turnsCount);
 
 	/*!
 	 * \fn	void ofDynamixel::setControlTable(ofControlTable * control_table);
 	 *
-	 * \brief	setControlTable.
+	 * \brief	Set the control table object.
 	 *
-	 * \param [in,out]	control_table	.
+	 * \param [in,out]	The new control table object.
 	 */
 
-	void setControlTable(ofControlTable * control_table);
+	void setControlTable(ofControlTable * controlTable);
 
 	/*!
 	 * \fn	void ofDynamixel::setPortHundler(ofConnexion * portHundler);
 	 *
-	 * \brief	setPortHundler.
+	 * \brief	Set the port handler.
 	 *
-	 * \param [in,out]	portHundler	.
+	 * \param [in,out]	The new port hundler.	.
 	 */
 
 	void setPortHandler(ofConnexion * portHandler);
@@ -232,7 +232,7 @@ public:
 	/*!
 	 * \fn	bool ofDynamixel::Ping();
 	 *
-	 * \brief	Pings this object.
+	 * \brief	Ping the Dynamixel servo.
 	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */
@@ -242,7 +242,7 @@ public:
 	/*!
 	 * \fn	bool ofDynamixel::Reset();
 	 *
-	 * \brief	Resets this object.
+	 * \brief	Reset the Dynamixel servo.
 	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */
@@ -252,7 +252,7 @@ public:
 	/*!
 	 * \fn	bool ofDynamixel::Initialize();
 	 *
-	 * \brief	Initializes this object.
+	 * \brief	Initialize the Dynamixel servo.
 	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */
@@ -262,7 +262,7 @@ public:
 	/*!
 	 * \fn	bool ofDynamixel::Synchronize();
 	 *
-	 * \brief	Synchronizes this object.
+	 * \brief	Synchronize the Dynamixel servo.
 	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */
@@ -272,7 +272,7 @@ public:
 	/*!
 	 * \fn	bool ofDynamixel::Stop();
 	 *
-	 * \brief	Stops this object.
+	 * \brief	Stop the Dynamixel servo.
 	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */
@@ -282,7 +282,7 @@ public:
 	/*!
 	 * \fn	bool ofDynamixel::reboot();
 	 *
-	 * \brief	Reboots this object.
+	 * \brief	Reboots the Dynamixel servo.
 	 *
 	 * \return	True if it succeeds, false if it fails.
 	 */

@@ -110,9 +110,9 @@ void ofDynamixel::setPositionMaximum(int positionMaximum)
 	this->positionMaximum = positionMaximum;
 }
 
-void ofDynamixel::setTurnsCount(int turns_count)
+void ofDynamixel::setTurnsCount(int turnsCount)
 {
-	this->turnsCount = turns_count;
+	this->turnsCount = turnsCount;
 }
 
 void ofDynamixel::setControlTable(ofControlTable * controlTable)

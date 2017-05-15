@@ -4,6 +4,7 @@
 #include "ofxGui/src/ofxGui.h"
 #include "ofxDynamixel/src/ofConnexion.h"
 #include "ofxDynamixel/src/ofControlTable.h"
+#include "ofxDynamixel/src/ofDynamixel.h"
 
 class ofDynamixelServo : public ofBaseApp {
 
@@ -65,8 +66,10 @@ private:
 	ofxLabel lockeeprom;
 	ofxLabel punch;
 	ofxLabel goal_acceleration;
+	ofxIn
 
 	ofControlTable * control_table;
 	ofConnexion * connexion;
+	ofDynamixel * dynamixel; 
 
 };

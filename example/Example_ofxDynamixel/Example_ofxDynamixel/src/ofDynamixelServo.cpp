@@ -7,7 +7,8 @@
 //--------------------------------------------------------------
 
 ofDynamixelServo::ofDynamixelServo(int id, ofConnexion * portConnexion) {
-	control_table = new ofControlTable(id, portConnexion);
+	//control_table = new ofControlTable(id, portConnexion);
+	this->dynamixel = new ofDynamixel(id, "COM4", 1.0, 57142, 0, 510);
 	setup();
 }
 
@@ -23,8 +24,8 @@ void ofDynamixelServo::setup() {
 	dynamixel_move.setSize(250, control_table_infos.getHeight());
 	dynamixel_move.setPosition(300, 10);
 	ofxIntSlider * dyna  = new  ofxIntSlider();
-	dyna->addListener(this, &ofDynamixelServo::positionChanged);
 	dynamixel_move.add(dyna->setup("Position Goal", 300, 0, 1023,250,15));
+	dyna->addListener(this, &ofDynamixelServo::positionChanged); // after for no change when start program
 }
 
 

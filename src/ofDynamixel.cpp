@@ -155,10 +155,6 @@ bool ofDynamixel::Initialize()
 	return true;
 }
 
-bool ofDynamixel::Synchronize()
-{
-	return false;
-}
 
 void ofDynamixel::Stop()
 {
@@ -173,4 +169,21 @@ bool ofDynamixel::reboot()
 		return false;
 	}
 	return true;
+}
+
+bool ofDynamixel::move(int goalPosition, int movingSpeed, int accelerationSpeed, int brakingSpeed)
+{
+	if (movingSpeed >= 0) {
+		this->controlTable->setMovingSpeed(movingSpeed);
+	}
+
+	if (accelerationSpeed >= 0) {
+		;
+	}
+
+	if (brakingSpeed >= 0) {
+		;
+	}
+
+	return this->controlTable->setGoalPosition(goalPosition);
 }

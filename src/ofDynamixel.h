@@ -259,15 +259,6 @@ public:
 
 	bool Initialize();
 
-	/*!
-	 * \fn	bool ofDynamixel::Synchronize();
-	 *
-	 * \brief	Synchronize the Dynamixel servo.
-	 *
-	 * \return	True if it succeeds, false if it fails.
-	 */
-
-	bool Synchronize(); // delete ?
 
 	/*!
 	 * \fn	bool ofDynamixel::Stop();
@@ -288,6 +279,8 @@ public:
 	 */
 
 	bool reboot();
+
+	bool move(int goalPosition, int movingSpeed = -1, int accelerationSpeed = -1, int brakingSpeed = -1);
 
 	//ErrorStatus enum
 	//	GetRegisterValue

@@ -116,8 +116,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;
 D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include;
 D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk;
 D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_linux;
@@ -129,7 +128,6 @@ D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -141,8 +139,7 @@ D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;
 D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include;
 D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk;
 D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_linux;
@@ -157,7 +154,6 @@ D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -169,8 +165,7 @@ D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;
 D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include;
 D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk;
 D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_linux;
@@ -184,7 +179,6 @@ D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>

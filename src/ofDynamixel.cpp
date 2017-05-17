@@ -178,7 +178,7 @@ bool ofDynamixel::move(int goalPosition, int movingSpeed, int accelerationSpeed,
 	}
 
 	if (accelerationSpeed >= 0) {
-		;
+		
 	}
 
 	if (brakingSpeed >= 0) {
@@ -186,4 +186,15 @@ bool ofDynamixel::move(int goalPosition, int movingSpeed, int accelerationSpeed,
 	}
 
 	return this->controlTable->setGoalPosition(goalPosition);
+}
+
+
+void calculteTime(int accelerationSpeed, int goalPosition) 
+{
+	
+}
+
+void calcultePosition(int accelerationSpeed, int goalPosition) 
+{
+	
 }

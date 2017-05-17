@@ -66,7 +66,7 @@ private:
 	ofxLabel lockeeprom;
 	ofxLabel punch;
 	ofxLabel goal_acceleration;
-	ofxIn
+	//ofxIn
 
 	ofControlTable * control_table;
 	ofConnexion * connexion;

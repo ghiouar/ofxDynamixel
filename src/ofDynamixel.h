@@ -289,7 +289,8 @@ public:
 
 
 private:
-	/*! \brief	The identifier. */
+	/*! \brief	The idel
+	/* ntifier. */
 	int id;
 	/*! \brief	Name of the device. */
 	char * portName;
@@ -309,6 +310,11 @@ private:
 	ofControlTable * controlTable;
 	/*! \brief	The control table. */
 	ofConnexion * connexionPort;
+
+	
+	// private methods used by move method
+	void calculteTime(int accelerationSpeed, int goalPosition);
+	void calcultePosition(int accelerationSpeed, int goalPosition);
 
 
 };

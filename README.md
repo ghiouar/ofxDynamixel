@@ -18,6 +18,7 @@ OfxDynamixel is contains the following class :
 
 - ofConnexion : Create a connection with the Dynamixel actuators by using the methods of the DynamixelSDK library which. You must provide device name (COM), boudrate, and the protocol version to create a connection.
 - ofControleTable : provides the necessary methods for reading and modifying the registers of the control table.
+- ofDynamixel : The main class for each dynamixel, it contains a control table, a connection with the port and methods to communicate with the dynamixel like ping the reset, reboot, move etc. Each dynamixel has an object of the class ofDynamixel that represents it in the application. All possible operations are included in this class.
 
 The Development of the ofxDynamixel class is in progress. this class is the global class to communicate with the Dynamxel Servos. this class contains instances ofConnection ofControleTable and other methods such as reboot, stop, reset, ping.
 
@@ -39,7 +40,8 @@ The code in this repository is available under the [MIT License](https://secure.
 
 Known issues
 ------------
-April 25, 2017	: Development of the Dynamixel class is in progress
+May 2, 2017	: Development of the example of use is in progress.
+May 8, 2017	: Development of move method with speed and acceleration is in progress.
 
 Version history
 ------------

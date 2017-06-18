@@ -9,6 +9,7 @@ ofDynamixel::ofDynamixel(int id, char * device_name, float protocol_version, int
 	this->turnsCount = 0;
 	this->portHandler = new ofConnexion(device_name, protocol_version, baudrate);
 	this->controlTable = new ofControlTable(id, portHandler);
+	
 }
 
 ofDynamixel::ofDynamixel(int id, char * device_name, float protocol_version, int baudrate)
@@ -123,6 +124,7 @@ void ofDynamixel::setControlTable(ofControlTable * controlTable)
 void ofDynamixel::setPortHandler(ofConnexion * portHandler)
 {
 	this->portHandler = portHandler;
+	this->controlTable = new ofControlTable(id, portHandler); // modifie, not good
 }
 
 bool ofDynamixel::ping()

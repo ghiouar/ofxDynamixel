@@ -1,1 +1,3 @@
+ofxXmlSettings
 ofxDynamixel
+ofxUI

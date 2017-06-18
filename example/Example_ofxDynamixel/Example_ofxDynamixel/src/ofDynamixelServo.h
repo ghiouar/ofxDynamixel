@@ -5,14 +5,18 @@
 #include "ofxDynamixel/src/ofConnexion.h"
 #include "ofxDynamixel/src/ofControlTable.h"
 #include "ofxDynamixel/src/ofDynamixel.h"
+#include "ofxUI.h"
+#include "ofxGui/src/ofxGui.h"
 
 class ofDynamixelServo : public ofBaseApp {
 
 public:
-	ofDynamixelServo(int id, ofConnexion * portConnexion);
+	ofDynamixelServo(int id, ofConnexion * portConnexion, int minPosition = 0, int maxPosition = 1023);
 	void setup();
 	void update();
 	void draw();
+	void hide();
+	void show();
 
 	void keyPressed(int key);
 	void keyReleased(int key);
@@ -26,12 +30,16 @@ public:
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 
-	void ofDynamixelServo::positionChanged(int &countX);
+	void positionChanged(int &goalPosition);
+	void change(float goalPosition);
+	int getMinPosition();
+	int getMaxPosition();
+
 
 private:
 	ofxPanel control_table_infos;
 	ofxPanel dynamixel_move;
-	ofxButton read_infos;
+	ofxButton * read_infos;
 	ofxLabel nom;
 	ofxLabel model_number;
 	ofxLabel version_firmware;
@@ -66,10 +74,13 @@ private:
 	ofxLabel lockeeprom;
 	ofxLabel punch;
 	ofxLabel goal_acceleration;
+	//ofro
 	//ofxIn
 
 	ofControlTable * control_table;
 	ofConnexion * connexion;
 	ofDynamixel * dynamixel; 
+	int maxPosition, minPosition;
+	//ofsuper
 
 };

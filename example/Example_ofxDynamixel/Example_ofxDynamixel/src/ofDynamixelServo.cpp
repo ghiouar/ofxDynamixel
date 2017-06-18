@@ -6,16 +6,28 @@
 
 //--------------------------------------------------------------
 
-ofDynamixelServo::ofDynamixelServo(int id, ofConnexion * portConnexion) {
+ofDynamixelServo::ofDynamixelServo(int id, ofConnexion * portConnexion, int minPosition, int maxPosition) {
 	//control_table = new ofControlTable(id, portConnexion);
-	this->dynamixel = new ofDynamixel(id, "COM4", 1.0, 57142, 0, 510);
+	this->dynamixel = new ofDynamixel(id, "COM4", 1.0, 57142, minPosition, maxPosition);
+	this->minPosition = minPosition;
+	this->maxPosition = maxPosition;
+	this->dynamixel->setPortHandler(portConnexion);
+	if (dynamixel->getControlTable() != NULL) {
+		printf("Go\n");
+	 }
+	control_table = this->dynamixel->getControlTable();
+
+	printf("ID \t\t\t\t: %d\n", control_table->getID());
+	printf("Model Number \t\t\t: %d\n", control_table->modelNumber());
+	printf("Version of Firmware\t\t: %d\n", control_table->firmwareVersion());
+	printf("Baud Rate \t\t\t: %d\n", control_table->baudRate());
+
 	setup();
 }
 
 
 void ofDynamixelServo::setup() {
 
-	update();
 
 	dynamixel_move.setup();
 	std::stringstream ss;
@@ -24,8 +36,16 @@ void ofDynamixelServo::setup() {
 	dynamixel_move.setSize(250, control_table_infos.getHeight());
 	dynamixel_move.setPosition(300, 10);
 	ofxIntSlider * dyna  = new  ofxIntSlider();
-	dynamixel_move.add(dyna->setup("Position Goal", 300, 0, 1023,250,15));
+	int presentPostion = this->dynamixel->getControlTable()->presentPosition();
+	dynamixel_move.add(dyna->setup("Position Goal", presentPostion, minPosition, maxPosition,250,15));
 	dyna->addListener(this, &ofDynamixelServo::positionChanged); // after for no change when start program
+	read_infos = new ofxButton();
+	read_infos->setName("Connecter");
+	read_infos->draw();
+	//dynamixel_move.add(read_infos);
+	
+	//setGUI5();
+	update();
 }
 
 
@@ -34,9 +54,28 @@ void ofDynamixelServo::positionChanged(int &goalPosition) {
 	//update();
 }
 
+void ofDynamixelServo::change(float goalPosition) {
+	control_table->setGoalPosition(goalPosition);
+	cout << "change\n";
+	//update();
+}
+
+int ofDynamixelServo::getMinPosition()
+{
+	return minPosition;
+}
+
+int ofDynamixelServo::getMaxPosition()
+{
+	return maxPosition;
+}
+
 //--------------------------------------------------------------
 void ofDynamixelServo::update() {
 	control_table_infos.setup();
+
+	
+
 	control_table_infos.setName("Control Table Information");
 	control_table_infos.setSize(250, control_table_infos.getHeight());
 	// RAM
@@ -79,7 +118,14 @@ void ofDynamixelServo::update() {
 //--------------------------------------------------------------
 void ofDynamixelServo::draw() {
 	control_table_infos.draw();
-	dynamixel_move.draw();
+}
+
+void ofDynamixelServo::hide() {
+	control_table_infos.setPosition(1000, 1000);
+}
+
+void ofDynamixelServo::show() { 
+	control_table_infos.setPosition(10, 10);
 }
 
 //--------------------------------------------------------------
@@ -136,3 +182,5 @@ void ofDynamixelServo::gotMessage(ofMessage msg) {
 void ofDynamixelServo::dragEvent(ofDragInfo dragInfo) {
 
 }
+
+

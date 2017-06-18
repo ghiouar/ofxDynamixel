@@ -32,4 +32,15 @@ private:
 	ofDynamixelServo * dyna_3;
 	ofDynamixelServo * dyna_4;
 
+	void setGUI5();
+	void setGUI1();
+	void guiEvent(ofxUIEventArgs &e);
+
+
+	ofxUISuperCanvas *gui5;
+	ofxUISuperCanvas *gui1;
+
+	ofxUIDropDownList* ids;
+	ofxUIRotarySlider * rotation;
+	int id;
 };

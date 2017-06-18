@@ -96,7 +96,8 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\..\..\libs\DynamixelSDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\libs\DynamixelSDK\include;D:\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;D:\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+D:\of_v0.9.8_vs_release\addons\ofxUI\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -116,11 +117,8 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_linux;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_linux;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_windows;D:\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;D:\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+D:\of_v0.9.8_vs_release\addons\ofxUI\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -139,11 +137,8 @@ D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_linux;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_linux;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_windows;D:\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;D:\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+D:\of_v0.9.8_vs_release\addons\ofxUI\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -165,11 +160,8 @@ D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_linux;
-D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxDynamixel\src;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_linux;D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_sdk_windows;D:\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;D:\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+D:\of_v0.9.8_vs_release\addons\ofxUI\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -185,6 +177,54 @@ D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUI2DGraph.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUI2DPad.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIBaseDraws.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIBiLabelSlider.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIButton.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUICanvas.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUICircleSlider.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIDragableLabelButton.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIDropDownList.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIEventArgs.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIFPS.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIFPSSlider.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIImage.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIImageButton.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIImageSampler.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIImageSlider.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIImageToggle.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUILabel.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUILabelButton.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUILabelToggle.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIMinimalSlider.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIMovingGraph.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIMultiImageButton.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIMultiImageToggle.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUINumberDialer.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIRadio.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIRangeSlider.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIRectangle.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIRotarySlider.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIScrollableCanvas.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUISlider.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUISortableList.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUISpacer.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUISpectrum.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUISuperCanvas.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUITabBar.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUITextArea.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUITextInput.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIToggle.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIToggleMatrix.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIValuePlotter.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIWaveform.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIWidget.cpp" />
+    <ClCompile Include="..\..\..\..\ofxUI\src\ofxUIWidgetWithLabel.cpp" />
+    <ClCompile Include="..\..\..\..\ofxXmlSettings\libs\tinyxml.cpp" />
+    <ClCompile Include="..\..\..\..\ofxXmlSettings\libs\tinyxmlerror.cpp" />
+    <ClCompile Include="..\..\..\..\ofxXmlSettings\libs\tinyxmlparser.cpp" />
+    <ClCompile Include="..\..\..\..\ofxXmlSettings\src\ofxXmlSettings.cpp" />
     <ClCompile Include="..\..\..\src\ofConnexion.cpp" />
     <ClCompile Include="..\..\..\src\ofControlTable.cpp" />
     <ClCompile Include="..\..\..\src\ofDynamixel.cpp" />
@@ -194,6 +234,58 @@ D:\of_v0.9.8_vs_release\addons\ofxDynamixel\libs\DynamixelSDK\include\dynamixel_
     <ClCompile Include="src\ofDynamixelServo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUI.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUI2DGraph.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUI2DPad.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIBaseDraws.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIBiLabelSlider.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIButton.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUICanvas.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUICircleSlider.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIDefines.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIDragableLabelButton.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIDropDownList.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIEventArgs.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIFPS.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIFPSSlider.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIImage.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIImageButton.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIImageSampler.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIImageSlider.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIImageToggle.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUILabel.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUILabelButton.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUILabelToggle.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIMinimalSlider.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIMovingGraph.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIMultiImageButton.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIMultiImageToggle.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUINumberDialer.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIOFWrapper.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIRadio.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIRangeSlider.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIRectangle.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIRotarySlider.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIScrollableCanvas.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUISlider.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUISortableList.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUISpacer.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUISpectrum.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUISuperCanvas.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUITabBar.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUITextArea.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUITextInput.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIToggle.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIToggleMatrix.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIUtils.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIValuePlotter.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIWaveform.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIWidget.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIWidgets.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIWidgetWithLabel.h" />
+    <ClInclude Include="..\..\..\..\ofxUI\src\ofxUIWrapper.h" />
+    <ClInclude Include="..\..\..\..\ofxXmlSettings\libs\tinyxml.h" />
+    <ClInclude Include="..\..\..\..\ofxXmlSettings\src\ofxXmlSettings.h" />
     <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk.h" />
     <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk\group_bulk_read.h" />
     <ClInclude Include="..\..\..\libs\DynamixelSDK\include\dynamixel_sdk\group_bulk_write.h" />

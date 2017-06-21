@@ -120,7 +120,17 @@ public:
 	 */
 
 	bool setBaudRate(int baudrate);
-
+	
+	/*!
+	 * \fn	bool ping(int id);
+	 *
+	 * \brief	Ping the dynamixel.
+	 *
+	 * \param	id	Dynamixel ID.
+	 *
+	 * \return	true if success ping, false if not.
+	 */
+	bool ping(int id);
 private:
 	/*! \brief	The baudrate */
 	int baudrate;

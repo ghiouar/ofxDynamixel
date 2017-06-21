@@ -25,9 +25,9 @@ ofConnexion * ofControlTable::getConnexion()
 	return this->connexion;
 }
 
+
 void ofControlTable::readData(uint16_t address) {
-	if (address == 8 || address == 14 || address == 30 || address == 34 || address == 36 /*||
-																						 address == 26|| address == 27 || address == 28 || address == 29*/)
+	if (address == 8 || address == 14 || address == 30 || address == 34 || address == 36 )
 	{
 		connexion->getPacketHandler()->read2ByteTxRx(connexion->getPortHandler(), id, address, &data2Byte, &error);
 	}
@@ -38,8 +38,7 @@ void ofControlTable::readData(uint16_t address) {
 }
 
 int ofControlTable::writeData(int address, int dataChange) {
-	if (address == 8 || address == 14 || address == 30 || address == 34 || address == 36 /*||
-																						 address == 26|| address == 27 || address == 28 || address == 29*/)
+	if (address == 8 || address == 14 || address == 30 || address == 34 || address == 36 || address == 32 )
 	{
 		return connexion->getPacketHandler()->write2ByteTxRx(connexion->getPortHandler(), id, address, dataChange, &error);
 	}

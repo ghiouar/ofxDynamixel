@@ -22,6 +22,18 @@ class ofDynamixel
 public:
 
 	/*!
+	* \fn	ofDynamixel::ofDynamixel(int id, ofConnexion * portHandler, int position_min, int position_max);
+	*
+	* \brief	Constructor of the ofControlTable class, Creates instance of ofControlTable.
+	*
+	* \param 		  	id			   	The Dynamixel ID.
+	* \param 		  	portHandler		The port Handler.
+	* \param 		  	positionMin	   	position Minimum limit.
+	* \param 		  	positionMax	   	position Maximum limit.
+	*/
+	ofDynamixel(int id, ofConnexion * portHandler, int position_min, int position_max);
+
+	/*!
 	 * \fn	ofDynamixel::ofDynamixel(int id, char * portName, double protocolVersion, int baudrate, int positionMin, int positionMax);
 	 *
 	 * \brief	Constructor of the ofControlTable class, Creates instance of ofControlTable.
@@ -279,18 +291,32 @@ public:
 	 */
 
 	bool reboot();
-
-	bool move(int goalPosition, int movingSpeed = -1, int accelerationSpeed = -1, int brakingSpeed = -1);
-
-	//ErrorStatus enum
-	//	GetRegisterValue
-	//		SetRegisterValue
-	//		ReadAll
+	
+	/*!
+	 * \fn	bool move(int goalPosition, int movingSpeed = -1);
+	 *
+	 * \brief	Moving to a goal position with a moving speed.
+	 * \param 		  	goalPosition	goal position.
+	 * \param 		  	movingSpeed	   	moving speed.
+	 *
+	 * \return	True if succes, false if it fails.
+	 */
+	bool move(int goalPosition, int movingSpeed = -1);
+	
+	/*!
+	 * \fn	void moveWithAcceleration(int goalPosition, int movingSpeed, int accelerationSpeed);
+	 *
+	 * \brief	Moving to a goal position with a moving speed and a acceleration.
+	 * \param 		  	goalPosition		Goal position.
+	 * \param 		  	movingSpeed	   		Moving speed.
+	 * \param 			accelerationSpeed	Acceleration.
+	 * \return	True if succes, false if it fails.
+	 */
+	void moveWithAcceleration(int goalPosition, int movingSpeed, int accelerationSpeed);
 
 
 private:
-	/*! \brief	The idel
-	/* ntifier. */
+	/*! \brief	The identifier. */
 	int id;
 	/*! \brief	Name of the device. */
 	char * portName;
@@ -304,17 +330,10 @@ private:
 	int positionMaximum;
 	/*! \brief	Number of turns. */
 	int turnsCount;
-	/*! \brief	The port handler. */
-	ofConnexion * portHandler;
 	/*! \brief	The control table. */
 	ofControlTable * controlTable;
 	/*! \brief	The control table. */
-	ofConnexion * connexionPort;
-
-	
-	// private methods used by move method
-	void calculteTime(int accelerationSpeed, int goalPosition);
-	void calcultePosition(int accelerationSpeed, int goalPosition);
+	ofConnexion * portHandler;
 
 
 };

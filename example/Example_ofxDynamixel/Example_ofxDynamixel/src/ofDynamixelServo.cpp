@@ -60,6 +60,11 @@ void ofDynamixelServo::change(float goalPosition) {
 	//update();
 }
 
+void ofDynamixelServo::move(float goalPosition, float movingSpeed)
+{
+	this->dynamixel->move(goalPosition, movingSpeed);
+}
+
 int ofDynamixelServo::getMinPosition()
 {
 	return minPosition;
@@ -70,18 +75,27 @@ int ofDynamixelServo::getMaxPosition()
 	return maxPosition;
 }
 
+ofDynamixel * ofDynamixelServo::getDynamixel()
+{
+	return this->dynamixel;
+}
+
+ofxPanel ofDynamixelServo::getControl_table_infos()
+{
+	return control_table_infos;
+}
+
 //--------------------------------------------------------------
 void ofDynamixelServo::update() {
 	control_table_infos.setup();
-
-	
+		
 
 	control_table_infos.setName("Control Table Information");
 	control_table_infos.setSize(250, control_table_infos.getHeight());
 	// RAM
 	control_table_infos.add(identifier.setup("ID \t\t\t", ofToString(control_table->getID()), 250));
 	control_table_infos.add(model_number.setup("Model Number \t\t", ofToString(control_table->modelNumber()), 250));
-	printf("ModelNumber : %d", control_table->modelNumber());
+	//printf("ModelNumber : %d", control_table->modelNumber());
 	control_table_infos.add(version_firmware.setup("Version of Firmware\t", ofToString(control_table->firmwareVersion()), 250));
 	control_table_infos.add(baud_rate.setup("Baud Rate \t\t", ofToString(control_table->baudRate()), 250));
 	control_table_infos.add(return_delay_time.setup("Return Delay Time\t", ofToString(control_table->returnDelay()), 250));
@@ -118,6 +132,8 @@ void ofDynamixelServo::update() {
 //--------------------------------------------------------------
 void ofDynamixelServo::draw() {
 	control_table_infos.draw();
+	//control_table_infos.setPosition(550, 10);
+	//hide();
 }
 
 void ofDynamixelServo::hide() {
@@ -125,7 +141,10 @@ void ofDynamixelServo::hide() {
 }
 
 void ofDynamixelServo::show() { 
-	control_table_infos.setPosition(10, 10);
+	update();
+	control_table_infos.setPosition(550, 10);
+	//control_table_infos.setShape((500.0, 10.0,(float) control_table_infos.getWidth(), (float)control_table_infos.getHeight()));
+	//control_table_infos.setShape(500.0, 10.0, (float)control_table_infos.getWidth(), (float)control_table_infos.getHeight());
 }
 
 //--------------------------------------------------------------

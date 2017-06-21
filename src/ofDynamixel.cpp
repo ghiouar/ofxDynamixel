@@ -2,16 +2,28 @@
 #include "stdafx.h"
 
 
+ofDynamixel::ofDynamixel(int id, ofConnexion * portHandler, int position_min, int position_max)
+{
+	this->id = id;
+	this->positionMinimum = position_min;
+	this->positionMaximum = position_max;
+	this->turnsCount = 0;
+	this->portHandler = portHandler;
+	this->controlTable = new ofControlTable(id, portHandler);
+
+}
+
 ofDynamixel::ofDynamixel(int id, char * device_name, float protocol_version, int baudrate, int position_min, int position_max)
 {
-	this->id = id; this->positionMinimum = position_min;
+	this->id = id; 
+	this->positionMinimum = position_min;
 	this->positionMaximum = position_max;
 	this->turnsCount = 0;
 	this->portHandler = new ofConnexion(device_name, protocol_version, baudrate);
 	this->controlTable = new ofControlTable(id, portHandler);
-	
 }
 
+// update to save one construtor with initial value !!
 ofDynamixel::ofDynamixel(int id, char * device_name, float protocol_version, int baudrate)
 {
 	this->id = id;
@@ -68,7 +80,7 @@ double ofDynamixel::getProtocolVersion()
 
 int ofDynamixel::getBaudrate()
 {
-	return baudrate;
+	return this->baudrate;
 }
 
 int ofDynamixel::getPositionMinimum()
@@ -124,13 +136,14 @@ void ofDynamixel::setControlTable(ofControlTable * controlTable)
 void ofDynamixel::setPortHandler(ofConnexion * portHandler)
 {
 	this->portHandler = portHandler;
-	this->controlTable = new ofControlTable(id, portHandler); // modifie, not good
+	this->controlTable = new ofControlTable(id, portHandler); 
+
 }
 
 bool ofDynamixel::ping()
 {
 	uint8_t error = 0;
-	this->portHandler->getPacketHandler()->ping(this->portHandler->getPortHandler(), this->id, &error);
+	error = this->portHandler->getPacketHandler()->ping(this->portHandler->getPortHandler(), this->id, &error);
 	if (error != 0) {
 		return false;
 	}
@@ -153,50 +166,49 @@ bool ofDynamixel::Initialize()
 	this->portHandler->getPortHandler()->clearPort();
 	if (error != 0) {
 		return false;
-	}
+	} // verife error 
 	return true;
 }
 
 
 void ofDynamixel::Stop()
 {
-	this->controlTable->getConnexion()->close();
+	this->portHandler->close();
 }
 
 bool ofDynamixel::reboot()
 {
 	uint8_t error = 0;
-	this->portHandler->getPacketHandler()->reboot(this->portHandler->getPortHandler(), this->id, &error);
+	error = this->portHandler->getPacketHandler()->reboot(this->portHandler->getPortHandler(), this->id, &error);
 	if (error != 0) {
 		return false;
 	}
 	return true;
 }
 
-bool ofDynamixel::move(int goalPosition, int movingSpeed, int accelerationSpeed, int brakingSpeed)
+bool ofDynamixel::move(int goalPosition, int movingSpeed)
 {
 	if (movingSpeed >= 0) {
 		this->controlTable->setMovingSpeed(movingSpeed);
 	}
-
-	if (accelerationSpeed >= 0) {
-		
-	}
-
-	if (brakingSpeed >= 0) {
-		;
-	}
-
 	return this->controlTable->setGoalPosition(goalPosition);
 }
 
-
-void calculteTime(int accelerationSpeed, int goalPosition) 
+void ofDynamixel::moveWithAcceleration(int goalPosition, int movingSpeed, int accelerationSpeed)
 {
-	
-}
+	int acceleration = accelerationSpeed;
+	int position = accelerationSpeed;
+	int movingspeed = 0;
+	int i = 1;
+	while (movingspeed < movingSpeed) {
+		while (this->controlTable->moving()) {
+		}
+		this->controlTable->setMovingSpeed(accelerationSpeed * i);
+		this->controlTable->setGoalPosition(position * i);
+		i++;
+		movingspeed = acceleration * i;
 
-void calcultePosition(int accelerationSpeed, int goalPosition) 
-{
-	
+	}
+	this->controlTable->setMovingSpeed(movingSpeed);
+	this->controlTable->setGoalPosition(goalPosition);
 }

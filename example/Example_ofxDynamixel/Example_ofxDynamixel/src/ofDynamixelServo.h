@@ -18,6 +18,7 @@ public:
 	void hide();
 	void show();
 
+
 	void keyPressed(int key);
 	void keyReleased(int key);
 	void mouseMoved(int x, int y);
@@ -32,11 +33,17 @@ public:
 
 	void positionChanged(int &goalPosition);
 	void change(float goalPosition);
+	void move(float goalPosition, float movingSpeed);
 	int getMinPosition();
 	int getMaxPosition();
 
+	ofDynamixel * getDynamixel();
+
+	ofxPanel getControl_table_infos();
+
 
 private:
+
 	ofxPanel control_table_infos;
 	ofxPanel dynamixel_move;
 	ofxButton * read_infos;
@@ -76,6 +83,7 @@ private:
 	ofxLabel goal_acceleration;
 	//ofro
 	//ofxIn
+	//ofParameterGroup group_mapping;
 
 	ofControlTable * control_table;
 	ofConnexion * connexion;

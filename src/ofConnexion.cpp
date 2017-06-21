@@ -61,3 +61,12 @@ int ofConnexion::getBaudRate()
 	return  portHandler->getBaudRate();
 }
 
+bool ofConnexion::ping(int id)
+{
+	uint8_t error = 0;
+	error = packetHandler->ping(this->portHandler, id, &error);
+	if (error != 0) {
+		return false;
+	}
+	return true;
+}

@@ -82,6 +82,6 @@ All  basic operations such as the verification, modification and reading of the 
 
 Known issues
 ------------
-If you notice any issues, please report them [here] (https://github.com/ghiouar/OfxDynamixel/issues).
+If you notice any issues, please report them [here](https://github.com/ghiouar/OfxDynamixel/issues).
 
 

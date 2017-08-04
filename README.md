@@ -70,6 +70,53 @@ Compatibility
 ------------
 This addon is compatible with version 0.9.8 of OpenFrameworks (of v0.9.8_vs_release)
 
+Example of use
+------------
+```
+#include "ofxDynamixel/src/ofConnexion.h";
+#include "ofxDynamixel/src/ofDynamixel.h";
+
+#define PROTOCOL_VERSION      1.0
+#define ID                    1
+#define BAUDRATE              57142
+#define DEVICENAME            "COM4"    
+
+void ofApp::setup() {
+    ofConnexion * portConnexion = new ofConnexion(DEVICENAME, PROTOCOL_VERSION, BAUDRATE);
+    
+		bool succes = portConnexion->open();
+		if (succes)
+		{	
+			printf("Port is opened!\n");
+			succes = portConnexion->setBaudRate(57142);
+			if (succes)
+			{
+				printf("baudrate is changed!\n");
+			} else {
+				printf("Failed to change the baudrate!\n");
+			} 
+		} else {
+			printf("Failed to open the port!\n");
+		}
+
+		if (succes) {
+		    ofDynamixel * dynamixel = new ofDynamixel(ID, portConnexion);
+		    
+			// Read the information of the control table
+			printf(dynamixel->getControlTable()->getID());
+			printf(dynamixel->getControlTable()->modelNumber());
+			printf(dynamixel->getControlTable()->firmwareVersion());
+			printf(dynamixel->getControlTable()->baudRate());
+		
+			// Change the information of the control table
+			dynamixel->getControlTable()->setGoalPosition(512);
+			dynamixel->getControlTable()->setLed(1);
+		}
+		
+}
+
+```
+
 License
 -------
 The code in this repository is available under the [MIT License](https://secure.wikimedia.org/wikipedia/en/wiki/Mit_license). Copyright (c) [June 2017] [Abdessalam Ghiouar], See lience.md
@@ -82,6 +129,8 @@ All  basic operations such as the verification, modification and reading of the 
 
 Known issues
 ------------
+
+At present, the example focuses only with a set of 4 dynamixels. An update is coming.
 If you notice any issues, please report them [here](https://github.com/ghiouar/OfxDynamixel/issues).
 
 

@@ -131,6 +131,7 @@ Known issues
 ------------
 
 At present, the example focuses only with a set of 4 dynamixels. An update is coming.
+
 If you notice any issues, please report them [here](https://github.com/ghiouar/OfxDynamixel/issues).
 
 

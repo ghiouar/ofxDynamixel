@@ -73,8 +73,8 @@ This addon is compatible with version 0.9.8 of OpenFrameworks (of v0.9.8_vs_rele
 Example of use
 ------------
 ```
-#include "ofxDynamixel/src/ofConnexion.h";
-#include "ofxDynamixel/src/ofDynamixel.h";
+#include "ofConnexion.h";
+#include "ofDynamixel.h";
 
 #define PROTOCOL_VERSION      1.0
 #define ID                    1
@@ -88,7 +88,7 @@ void ofApp::setup() {
 		if (succes)
 		{	
 			printf("Port is opened!\n");
-			succes = portConnexion->setBaudRate(57142);
+			succes = portConnexion->setBaudRate(BAUDRATE);
 			if (succes)
 			{
 				printf("baudrate is changed!\n");
@@ -100,13 +100,13 @@ void ofApp::setup() {
 		}
 
 		if (succes) {
-		    ofDynamixel * dynamixel = new ofDynamixel(ID, portConnexion);
+		    ofDynamixel * dynamixel = new ofDynamixel(ID, portConnexion, 15, 700);
 		    
 			// Read the information of the control table
-			printf(dynamixel->getControlTable()->getID());
-			printf(dynamixel->getControlTable()->modelNumber());
-			printf(dynamixel->getControlTable()->firmwareVersion());
-			printf(dynamixel->getControlTable()->baudRate());
+			printf("ID : %d\n", dynamixel->getControlTable()->getID());
+			printf("Model number : %d\n", dynamixel->getControlTable()->modelNumber());
+			printf("Firmware version : %d\n", dynamixel->getControlTable()->firmwareVersion());
+			printf("BaudRate : %d\n", dynamixel->getControlTable()->baudRate());
 		
 			// Change the information of the control table
 			dynamixel->getControlTable()->setGoalPosition(512);

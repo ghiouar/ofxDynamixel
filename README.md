@@ -119,7 +119,7 @@ void ofApp::setup() {
 
 License
 -------
-The code in this repository is available under the [MIT License](https://secure.wikimedia.org/wikipedia/en/wiki/Mit_license). Copyright (c) [June 2017] [Abdessalam Ghiouar], See lience.md
+The code in this repository is available under the [MIT License](https://secure.wikimedia.org/wikipedia/en/wiki/Mit_license). Copyright (c) [June 2017] [Abdessalam Ghiouar], See license.md
 
 Version history
 ------------
